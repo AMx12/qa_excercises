@@ -111,7 +111,7 @@ public class checkURLQA {
 
 		} else {
 
-			test.log(LogStatus.FAIL, "URL has been verified.");
+			test.log(LogStatus.FAIL, "URL has not been verified.");
 
 		}
 		test.log(LogStatus.INFO, "Test end.");
