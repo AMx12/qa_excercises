@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="28924" started-at="2018-01-09T13:51:53Z" finished-at="2018-01-09T13:52:22Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="28924" started-at="2018-01-09T13:51:53Z" finished-at="2018-01-09T13:52:22Z">
+      <class name="testSel.testSel.checkURLQA">
+        <test-method status="PASS" signature="qaURLff()[pri:0, instance:testSel.testSel.checkURLQA@475530b9]" name="qaURLff" duration-ms="28886" started-at="2018-01-09T13:51:53Z" finished-at="2018-01-09T13:52:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qaURLff -->
+      </class> <!-- testSel.testSel.checkURLQA -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
