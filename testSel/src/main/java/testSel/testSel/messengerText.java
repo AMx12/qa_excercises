@@ -12,13 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-
 public class messengerText {
 
-	ExtentReports report;
-	ExtentTest test;
 	WebDriver driver;
 
 	@Test
@@ -70,18 +65,17 @@ public class messengerText {
 			// #js_9 > div > div > div._3rh8 > span._5iwm._5iwn._150g._58ah > label > input
 			friendSearch.click();
 			friendSearch.sendKeys(friend);
+			Thread.sleep(1000);
 			builder.moveByOffset(110, 130).click().build().perform();
 		}
 
 		Thread.sleep(500);
 		System.out.println("Hello");
 		for (int i = 0; i < 10; i++) {
-			Thread.sleep(50);
 			builder.sendKeys(message + " -AMx12").perform();
-			Thread.sleep(50);
 			builder.sendKeys(Keys.ENTER).perform();
 		}
-		Thread.sleep(5000);
+		Thread.sleep(100);
 
 		// WebElement searchBox = driver.findElement(By.name("q"));
 		// searchBox.sendKeys("ChromeDriver");
