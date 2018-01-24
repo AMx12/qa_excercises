@@ -1,4 +1,7 @@
- def summerBois(temp: Int, summer: Boolean): Any = (temp,summer) match{
+
+
+
+def summerBois(temp: Int, summer: Boolean): Any = (temp,summer) match{
   case(_,true) if (temp <= 100 && temp>=60) => true
   case(_,false) if (temp <= 90 && temp>=60) => true
   case(_) => false
@@ -9,31 +12,18 @@ println(summerBois(60, false))
 
 def sum3(num1: Int, num2: Int, num3: Int): Unit = {
   val myL = List(num1, num2, num3)
-  if ((List(num1, num2, num3).distinct.length) == 1) println(0)
-  if ((List(num1, num2, num3).distinct.length) > 1) {
-    ist(num1, num2, num3).distinct.filterNot(List(num1, num2, num3).groupBy(identity).collect { case (x, List(_, _, _*)) => x }))
+  if (myL.distinct.length == 1) println(0)
+  if (myL.distinct.length == 2) {
+    val newSet = (myL.groupBy(identity).collect { case (x, List(_, _, _*)) => x }).toSet
+    println((myL.toSet -- newSet).toString())
   }
+  if (myL.distinct.length == 3) println(myL.distinct.sum)
 }
-sum3(3, 2, 3)
+sum3(1, 2, 3)
+sum3(3, 3, 3)
+sum3(1, 1, 2)
 
-def luhnAlgorithm (num: String): Int = {
-  val number: String = num.reverse
-  var evens: Int = 0
-  var odds: Int = 0
-  var oddSplit: Int = 0
-  for (i<-0 to number.length - 1  by 2) evens += number.charAt(i).toString.toInt
-  for (i<-1 to number.length - 1 by 2) {
-    oddSplit = number.charAt(i).toString.toInt * 2
-    if (oddSplit > 9){
-     odds += oddSplit.toString.substring(0,1).toInt + oddSplit.toString.substring(1).toInt
-    } else {
-      odds += oddSplit
-    }
-  }
-  evens + odds
-}
-def luhnCheck (luhn: Int): Any = if (luhn % 10 == 0) luhn + " Valid" else luhn + " Not valid"
-println(luhnCheck(luhnAlgorithm("49927398716")))
+
 
 
 
